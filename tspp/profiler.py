@@ -11,7 +11,7 @@ class Profiler(object):
         self.last_event = None
 
     def register(self, name):
-        now = time.time()
+        now = time.clock()
         if name not in self.event_names:
             self.event_names[name] = len(self.events)
             if self.last_event is not None:
