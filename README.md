@@ -27,5 +27,13 @@ for i in xrange(10):
 print pr.profile()
 ```
 
+Which outputs:
+```
+Profiling
+	Total: 1.02262783051
+	start 0.000117778778076 0.01%
+	end of do_something 1.02251005173 99.99%
+```
+
 ## Install
 `git clone` this repo, `cd` to the repo, then run `pip install ./`.
