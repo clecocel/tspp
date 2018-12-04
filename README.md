@@ -4,14 +4,14 @@ If you are looking for a very simple profiler that lets you measure the time eac
 
 `tspp` typically replaces code that would look like:
 
-```
+```python
 start = time.time()
 do_something()
 print "do_something took", time.time() - start
 ```
 
 ## Example usage
-```
+```python
 import time
 from tspp import Profiler
 
