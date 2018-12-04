@@ -6,9 +6,7 @@ import time
 class Profiler(object):
     def __init__(self, profiler_name=""):
         self.name = profiler_name
-        self.events = []
-        self.event_names = {}
-        self.last_event = None
+        self.clear()
 
     def register(self, name):
         now = time.clock()
@@ -24,7 +22,9 @@ class Profiler(object):
         self.last_event = now
 
     def clear(self):
-        self.__init__()
+        self.events = []
+        self.event_names = {}
+        self.last_event = None
 
     def profile(self):
         if len(self.events) > 0:
