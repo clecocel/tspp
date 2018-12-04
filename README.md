@@ -18,7 +18,8 @@ from tspp import Profiler
 pr = Profiler()
 
 def do_something():
-    time.sleep(0.1)
+    for i in xrange(100000):
+    	pass
 
 for i in xrange(10):
     pr.register("start")
@@ -27,12 +28,12 @@ for i in xrange(10):
 print pr.profile()
 ```
 
-Which outputs:
+Which outputs something like
 ```
-Profiling
-	Total: 1.02262783051
-	start 0.000117778778076 0.01%
-	end of do_something 1.02251005173 99.99%
+Profiling 
+	Total: 0.013912
+	start 5.1e-05 0.37%
+	end of do_something 0.013861 99.63%
 ```
 
 ## Install
