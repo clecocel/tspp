@@ -5,9 +5,9 @@ If you are looking for a very simple profiler that lets you measure the time eac
 `tspp` typically replaces code that would look like:
 
 ```python
-start = time.time()
+start = time.clock()
 do_something()
-print "do_something took", time.time() - start
+print "do_something took", time.clock() - start
 ```
 
 ## Example usage
